@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,24 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://studentportal.uoh.edu.pk/resources/assets/images/icons/fav.gif">
 
     <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> -->
+
+
+    <style>
+        @font-face {
+            font-family: 'Source Sans 3';
+            font-style: normal;
+            font-weight: 100 900;
+            src: url('/resources/assets/fonts/SourceSans3-VariableFont_wght.ttf') format('truetype');
+        }
+
+        body, h1, h2, p {
+            font-family: 'Source Sans 3', sans-serif; 
+        }
+    </style>
+
+
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->
@@ -504,6 +522,23 @@
                   <tbody>
                                           <tr>
                         <td>1</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Object Oriented Programming</td>
+                        <td>Raja Mujeeb ur Rehman</td>
+                        <td>Mid Term Examination</td>
+                        <td>22 Apr 2025<br>12:40 PM</td>
+                        <td>22 Apr 2025<br>01:40 PM</td>
+
+                        <td>
+                                                        <!-- Disable the button if the test is not available yet or has already ended -->
+                              <span class="badge badge-danger" disabled>Test Not Available</span>
+                                                </td>
+
+
+
+
+                      </tr>
+                                          <tr>
+                        <td>2</td>
                         <td style="word-wrap: break-word; white-space: normal;">Introduction to Computer Networks</td>
                         <td>Gul Nawaz</td>
                         <td>Mid Term Examination</td>
@@ -519,7 +554,7 @@
 
                       </tr>
                                           <tr>
-                        <td>2</td>
+                        <td>3</td>
                         <td style="word-wrap: break-word; white-space: normal;">Introduction to Computer Networks</td>
                         <td>Gul Nawaz</td>
                         <td>Quiz</td>
@@ -535,7 +570,7 @@
 
                       </tr>
                                           <tr>
-                        <td>3</td>
+                        <td>4</td>
                         <td style="word-wrap: break-word; white-space: normal;">Introduction to Computer Networks</td>
                         <td>Gul Nawaz</td>
                         <td>Quiz</td>
@@ -552,7 +587,7 @@
 
                       </tr>
                                           <tr>
-                        <td>4</td>
+                        <td>5</td>
                         <td style="word-wrap: break-word; white-space: normal;">Software Engineering</td>
                         <td>Sana</td>
                         <td>Mid Term Examination</td>
@@ -569,7 +604,7 @@
 
                       </tr>
                                           <tr>
-                        <td>5</td>
+                        <td>6</td>
                         <td style="word-wrap: break-word; white-space: normal;">Software Engineering</td>
                         <td>Sana</td>
                         <td>Mid Term Examination</td>
@@ -586,7 +621,7 @@
 
                       </tr>
                                           <tr>
-                        <td>6</td>
+                        <td>7</td>
                         <td style="word-wrap: break-word; white-space: normal;">Software Engineering</td>
                         <td>Sana</td>
                         <td>Mid Term Examination</td>
@@ -701,7 +736,7 @@
     var jsTime = currentdate.getTime(); // JavaScript time in milliseconds
 
     // PHP current time passed from server as UNIX timestamp
-    var phpTime = 1745237255 * 1000; // Convert to milliseconds
+    var phpTime = 1745295604 * 1000; // Convert to milliseconds
 
     // Log both times for debugging
     console.log("JS Time (ms):", jsTime);
