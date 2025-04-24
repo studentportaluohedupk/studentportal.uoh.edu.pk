@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>UOH :: SIP</title>
+
+  <meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://studentportal.uoh.edu.pk/resources/assets/images/icons/fav.gif">
+
+    <!-- Google Font: Source Sans Pro -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> -->
+
+
+    <style>
+        @font-face {
+            font-family: 'Source Sans 3';
+            font-style: normal;
+            font-weight: 100 900;
+            src: url('/resources/assets/fonts/SourceSans3-VariableFont_wght.ttf') format('truetype');
+        }
+
+        body, h1, h2, p {
+            font-family: 'Source Sans 3', sans-serif; 
+        }
+    </style>
+
+
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/custom.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+
+</head>
+<body class="hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+  <!-- Navbar -->
+  
+  <!-- Preloader -->
+<!--  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+-->
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-light" style="background: linear-gradient(45deg, #813130, #2e255e);">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+       
+       
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+
+            <!-- <span> -->
+        <h4 class="align-left" style="color:#fff">
+          Welcome Mubashir Ali (Roll No: F23-0127 )        </h4>
+      <!-- </span> -->
+
+
+      <!-- Messages Dropdown Menu -->
+      
+      <!-- Notifications Dropdown Menu -->
+      <!--<li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>-->
+      <!-- <span> -->
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li> -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="https://studentportal.uoh.edu.pk/logout" >
+            <!-- <i class="fas fa-expand-arrows-alt"></i> -->
+            <!-- <i class="fa-regular fa-arrow-up-left-from-circle"></i> -->
+            <!-- <i class="fa-sharp fa-solid fa-arrow-up-left-from-circle"></i> -->
+            <span>Logout</span>
+          </a>
+        </li>
+
+      <!-- </span> -->
+        
+       
+    </ul>
+  </nav>
+  <!-- /.navbar -->  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar elevation-4" style="background: linear-gradient(to bottom, #813130, #2e255e);
+">
+    <!-- Brand Logo -->
+    <!-- <a href="javascript:void(0)" class="brand-link">
+
+      <img src="https://studentportal.uoh.edu.pk/resources/assets/images/logo.png" alt="The UoH Logo" class="brand-image " style="opacity: .8">
+
+       <span class="brand-text font-weight-bold">Student Portal</span>
+    </a> -->
+
+    <div style="margin: 12px;">
+        <a href="https://studentportal.uoh.edu.pk/dashboard" class="" style="">
+            <img src="https://studentportal.uoh.edu.pk/resources/assets/images/sip-logo-bold.png" alt="UOH Faculty Portal Logo" class="brand-image" style="opacity: .8;" width="200">
+        </a>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" style="margin-top:0px !important">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <!-- <img src="https://studentportal.uoh.edu.pk/resources/assets/images/students_pictures/F23-0127.jpg" class=" elevation-2" alt="User Image" style="    border-radius: 10px;"> -->
+                      <img src="https://studentportal.uoh.edu.pk/resources/assets/images/new_students_pictures/0UZepfyHlLmXXcEj_F23-0127.jpg" class=" elevation-2" alt="User Image" style="    border-radius: 10px;">
+                     
+
+          <!-- <img src="https://studentportal.uoh.edu.pk/resources/assets/images/icon.jpg" class=" elevation-2" alt="User Image" style="    border-radius: 10px;"> -->
+        </div>
+        <div class="info">
+                    <a href="https://studentportal.uoh.edu.pk/profile" class="d-block">Mubashir Ali</a>
+        </div>
+      </div>
+
+       
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav  nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" st>
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="https://studentportal.uoh.edu.pk/dashboard" class="nav-link">
+              <i class="nav-icon fa fa-home"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+             
+          </li>
+
+          <li class="nav-item" id="l100">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon fas fa-copy"></i> -->
+              <!-- <i class="nav-icon fa fa-user" aria-hidden="true"></i> -->
+              <i class="nav-icon fa fa-camera-retro"></i>
+              <p>
+                Profile
+                <i class="fas fa-angle-left right"></i>
+
+                <!-- <span class="badge badge-info right">New</span> -->
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="margin-left: 15%;">
+              <li class="nav-item" id="l-l100">
+                <a href="https://studentportal.uoh.edu.pk/profile" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>View Profile</p>
+                </a>
+              </li>
+              <li class="nav-item" id="l-l101">
+                <a href="https://studentportal.uoh.edu.pk/reset-password" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>Change Password</p>
+                </a>
+              </li>
+
+
+              
+            </ul>
+          </li>
+
+          <!-- ---------------------------- -->
+          <!-- --------- Courses ---------- -->
+          <!-- ---------------------------- -->
+           
+            
+
+            <li class="nav-item">
+              <a href="https://studentportal.uoh.edu.pk/semesters" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Semesters</p>
+              </a>
+            </li>
+
+
+            
+                      
+            
+
+          <li class="nav-item" id="l200">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book-open"></i>
+              <p>
+                Courses
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="margin-left: 15%;">
+              <li class="nav-item" id="l-l200">
+                <a href="https://studentportal.uoh.edu.pk/courses" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Regular</p>
+                </a>
+              </li>
+              <li class="nav-item" id="l-l201">
+                <a href="https://studentportal.uoh.edu.pk/courses-addl" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Repeat/Improve</p>
+                </a>
+              </li>
+              <li class="nav-item" id="l-l202">
+                <a href="https://studentportal.uoh.edu.pk/summ-courses" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Summer</p>
+                </a>
+              </li>
+
+              <li class="nav-item" id="l-l201">
+                <a href="https://studentportal.uoh.edu.pk/deficiency-courses" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Deficiency Courses</p>
+                </a>
+              </li>
+
+
+              
+            </ul>
+          </li>
+
+
+
+            
+            <li class="nav-item">
+              
+              <a href="https://studentportal.uoh.edu.pk/fee" class="nav-link">
+                
+                <i class="nav-icon fas fa-dollar-sign"></i>
+                <p> Fee</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              
+              <a href="https://studentportal.uoh.edu.pk/attendance" class="nav-link">
+                <i class="nav-icon fas fa-clock"></i>
+                <p> Attendance</p>
+              </a>
+            </li>
+
+            <!-- <li class="nav-item">
+              <a href="https://studentportal.uoh.edu.pk/exam" class="nav-link">
+                <i class="nav-icon fas fa-clock"></i>
+                <p> Examination</p>
+              </a>
+            </li> -->
+
+
+
+            <li class="nav-item" id="l300">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book-open"></i>
+              <p>
+                Examination
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="margin-left: 15%;">
+              <li class="nav-item" id="l-l300">
+                <a href="https://studentportal.uoh.edu.pk/exam" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Examination Results</p>
+                </a>
+              </li>
+
+              <li class="nav-item" id="l-l300">
+                <a href="https://studentportal.uoh.edu.pk/examination-card" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Examination Card</p>
+                </a>
+              </li>
+
+              <li class="nav-item" id="l-l300">
+                <a href="https://studentportal.uoh.edu.pk/online-exams" class="nav-link">
+                  <i class="nav-icon fas fa-copy"></i>
+                  <p>Online Exams &nbsp;</p>
+                  <span class="badge badge-warning">New</span>
+
+                </a>
+              </li>
+
+
+
+              
+            </ul>
+          </li>
+
+
+          
+ 
+
+           
+          <li class="nav-item" id="l30000000">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-check" aria-hidden="true"></i>
+              <p>
+                QEC
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="margin-left: 15%;">
+              <li class="nav-item" id="l30000001">
+                <a href="https://studentportal.uoh.edu.pk/instructor-evaluation" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>Instructor Evaluation</p>
+                </a>
+              </li>
+
+              <li class="nav-item" id="l30000002">
+                <a href="https://studentportal.uoh.edu.pk/course-evaluation" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>Course Evaluation</p>
+                </a>
+              </li>
+
+
+              <li class="nav-item" id="l30000003">
+                <a href="https://studentportal.uoh.edu.pk/list-evaluation" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>Evaluation Report</p>
+                </a>
+              </li>
+
+
+              
+            </ul>
+          </li>
+
+
+          <li class="nav-item" id="l40000000">
+            <a href="transport" class="nav-link">
+              <i class="nav-icon fa fa-car" aria-hidden="true"></i>
+              <p>
+                Transport              
+              </p>
+            </a> 
+          </li>
+
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <!-- <i class="nav-icon fas fa-copy"></i> -->
+              
+                <!-- Adjusted to match the style of the first icon -->
+                <i class="nav-icon fas fa-building"></i>
+
+              <p>
+                Library
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="margin-left: 15%;">
+              
+              <li class="nav-item"> 
+                <a href="http://121.52.149.154:83/library/opac" target="_blank" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>OPAC</p>
+                </a>
+              </li>
+
+              <li class="nav-item"> 
+                <a href="https://studentportal.uoh.edu.pk/e-books" target="_blank" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>Download E-Books</p>
+                </a>
+              </li>
+
+              <!-- <li class="nav-item">
+                <a href="javascript:void(0)" class="nav-link">
+                  <i class="fa fa-angle-right"></i>
+                  <p>Issued Books</p>
+                </a>
+              </li> -->
+              
+            </ul>
+          </li>
+
+          <li class="nav-item">
+              <a href="https://studentportal.uoh.edu.pk/reset-password" class="nav-link">
+                <i class="nav-icon fa fa-key" aria-hidden="true"></i>
+                <p>Reset Password</p>
+              </a>
+            </li>
+ 
+
+          <div style="padding: 10px;bottom:0; position:relative;">
+                <div class="update-msg card text-center" style="padding:10px">
+                    <h5 class="mt-1"><strong>UOH :: CMS</strong></h5>
+                    <p class="mb-3">Copyright © 2022-23<br>The University of Haripur</p>
+                    <a target="_blank" href="http://www.uoh.edu.pk" class="btn btn-outline-warning btn-sm" style="background-color: #ffc107; color: #000;">www.uoh.edu.pk</a>
+                </div> 
+            </div>
+           
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+   
+<style>
+    @media only screen and (max-width: 600px) {
+        .mob-mt {
+            padding-top: 50px;
+        }
+    }
+</style>
+
+<!-- Content Header (Page header) -->
+<div class="content-header mob-mt">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Online Tests/Quizzes/Examinations</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="content">
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+ 
+
+          
+          <!-- Test Search Form (Optional) -->
+
+          <!-- Available Tests Table -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">List of Available/ Conducted Tests/Quizzes/Examinations</h3>
+            </div>
+
+            <div class="card-body">
+              <table width="100%" class="table table-bordered table-hover dataTable dtr-inline dt-responsive nowrap" aria-describedby="available_tests_info">
+                                  <thead>
+                    <tr>
+                      <th width="5%">Sr#</th>
+                      <th width="40%">Course Name</th>
+                      <th width="40%">Teacher Name</th>
+                      <th width="40%">Test Title</th>
+                      <th width="20%">Start Time</th>
+                      <th width="20%">End Time</th>
+                      <th width="15%">Action</th>
+                    </tr>
+                  </thead>
+                  
+
+                  <tbody>
+                                          <tr>
+                        <td>1</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Linear Algebra</td>
+                        <td>MOMINA RASHID</td>
+                        <td>Mid Term Examination</td>
+                        <td>24 Apr 2025<br>12:35 PM</td>
+                        <td>24 Apr 2025<br>01:27 PM</td>
+
+                        <td>
+                                                        <!-- Disable the button if the test is not available yet or has already ended -->
+                                Marks Obtained: <strong>17</strong>/35
+                                                </td>
+
+
+
+
+                      </tr>
+                                          <tr>
+                        <td>2</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Database System</td>
+                        <td>Wafa Bibi</td>
+                        <td>Mid Term Examination</td>
+                        <td>23 Apr 2025<br>12:40 PM</td>
+                        <td>23 Apr 2025<br>01:25 PM</td>
+
+                        <td>
+                                                        <!-- Show the total marks if the test was completed -->
+                              Marks Obtained: <strong>12</strong>/35                                                </td>
+
+
+
+
+                      </tr>
+                                          <tr>
+                        <td>3</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Object Oriented Programming</td>
+                        <td>Raja Mujeeb ur Rehman</td>
+                        <td>Mid Term Examination</td>
+                        <td>22 Apr 2025<br>12:40 PM</td>
+                        <td>22 Apr 2025<br>01:40 PM</td>
+
+                        <td>
+                                                        <!-- Show the total marks if the test was completed -->
+                              Marks Obtained: <strong>26</strong>/30                                                </td>
+
+
+
+
+                      </tr>
+                                          <tr>
+                        <td>4</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Introduction to Computer Networks</td>
+                        <td>Gul Nawaz</td>
+                        <td>Mid Term Examination</td>
+                        <td>21 Apr 2025<br>12:30 PM</td>
+                        <td>21 Apr 2025<br>01:30 PM</td>
+
+                        <td>
+                                                        <!-- Show the total marks if the test was completed -->
+                              Marks Obtained: <strong>31</strong>/36                                                </td>
+
+
+
+
+                      </tr>
+                                          <tr>
+                        <td>5</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Introduction to Computer Networks</td>
+                        <td>Gul Nawaz</td>
+                        <td>Quiz</td>
+                        <td>10 Apr 2025<br>08:45 AM</td>
+                        <td>10 Apr 2025<br>09:00 AM</td>
+
+                        <td>
+                                                        <!-- Show the total marks if the test was completed -->
+                              Marks Obtained: <strong>10</strong>/10                                                </td>
+
+
+
+
+                      </tr>
+                                      </tbody>
+
+
+
+
+
+                              </table>
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  
+  /* General table styling */
+  .table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  .table th, .table td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+  }
+
+  .table th {
+      background-color: #f1f1f1;
+  }
+
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+      .table, .table thead, .table tbody, .table th, .table td, .table tr {
+          display: block;
+      }
+
+      .table thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+
+      .table tr {
+          margin: 0 0 1rem 0;
+          border-bottom: 1px solid #ddd;
+          display: block;
+          padding: 10px;
+      }
+
+      .table td {
+          border: none;
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+      }
+
+      .table td:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          text-align: left;
+          font-weight: bold;
+      }
+
+      /* Labels for mobile view */
+      .table td:nth-of-type(1):before { content: "#"; }
+      .table td:nth-of-type(2):before { content: "Course Name"; }
+      .table td:nth-of-type(3):before { content: "Teacher Name"; }
+      .table td:nth-of-type(4):before { content: "Test Title"; }
+      .table td:nth-of-type(5):before { content: "Start Time"; }
+      .table td:nth-of-type(6):before { content: "End Time"; }
+      .table td:nth-of-type(7):before { content: "Action"; }
+
+      /* Button style for mobile */
+      .table td .btn {
+          display: block;
+          width: 100%;
+          margin-top: 5px;
+      }
+  }
+</style>
+
+<script type="text/javascript">
+    // JavaScript current time
+    var currentdate = new Date(); 
+    var jsTime = currentdate.getTime(); // JavaScript time in milliseconds
+
+    // PHP current time passed from server as UNIX timestamp
+    var phpTime = 1745478134 * 1000; // Convert to milliseconds
+
+    // Log both times for debugging
+    console.log("JS Time (ms):", jsTime);
+    console.log("PHP Time (ms):", phpTime);
+
+    // Compare times
+    var timeDifference = Math.abs(jsTime - phpTime); // Difference in milliseconds
+    var maxAllowedDifference = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+    // Log the difference for debugging
+    console.log("timeDifference (ms):", timeDifference);
+    console.log("maxAllowedDifference (ms):", maxAllowedDifference);
+
+    if (timeDifference > maxAllowedDifference) {
+        // Access denied: Disable the button
+        // alert("Access denied: Time mismatch detected. Please correct your clock time before starting Examination");
+
+        // Disable the button
+        var quizStartButton = document.getElementById("quiz_start");
+        quizStartButton.style.pointerEvents = "none"; // Disable clicking
+        quizStartButton.style.opacity = "0.6"; // Make it look disabled
+        quizStartButton.setAttribute("title", "You cannot start the test due to a time mismatch.");
+    } else {
+        // alert("Access granted.");
+    }
+</script>
+
+
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+   <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer" style="background: linear-gradient(286deg, #813130, #2e255e);">
+    <div style="float: right;">
+      
+    <span style="color:#fff" >Copyright &copy; 2023 The University of Haripur. All rights reserved.</span>
+     
+    </div>
+  </footer></div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select 2 -->
+<script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/select2/js/select2.full.min.js"></script>
+
+<script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://studentportal.uoh.edu.pk/resources/assets/dist/js/adminlte.js"></script>
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/raphael/raphael.min.js"></script>
+<!-- <script src="https://studentportal.uoh.edu.pk/resources/assets/plugins/jquery-mapael/jquery.mapael.min.js"></script> -->
+<script src="https://studentportal.uoh.edu.pk/resources/assets/js/sweetalert2.all.min.js"></script>
+<script src="https://studentportal.uoh.edu.pk/resources/assets/custom.js?version=10.0"></script>
+ 
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+    });
+
+
+
+</script>
+
+
+</body>
+</html>
