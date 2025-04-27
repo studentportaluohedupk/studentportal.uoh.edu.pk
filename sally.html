@@ -510,18 +510,18 @@
                   
 
                   <tbody>
-                                          <tr>
+
+                     <tr>
                         <td>1</td>
-                        <td style="word-wrap: break-word; white-space: normal;">Functional English II</td>
-                        <td>Syeda Sarah Ali Kazmi</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Quantitative Reasoning II</td>
+                        <td>HAJRA ZEB</td>
                         <td>Mid Term Examination</td>
-                        <td>25 Apr 2025<br>09:40 AM</td>
-                        <td>25 Apr 2025<br>10:15 AM</td>
+                        <td>28 Apr 2025<br>09:40 AM</td>
+                        <td>28 Apr 2025<br>10:15 AM</td>
 
                         <td>
-                                                        <!-- Disable the button if the test is not available yet or has already ended -->
-                              Marks Obtained: <strong>16</strong>/25
-                                                </td>
+                                                        <!-- Show the total marks if the test was completed -->
+                              Marks Obtained: <strong>15</strong>/25                                                </td>
 
 
 
@@ -529,6 +529,22 @@
                       </tr>
                                           <tr>
                         <td>2</td>
+                        <td style="word-wrap: break-word; white-space: normal;">Functional English II</td>
+                        <td>Syeda Sarah Ali Kazmi</td>
+                        <td>Mid Term Examination</td>
+                        <td>25 Apr 2025<br>09:40 AM</td>
+                        <td>25 Apr 2025<br>10:15 AM</td>
+
+                        <td>
+                                                        <!-- Show the total marks if the test was completed -->
+                              Marks Obtained: <strong>17</strong>/25                                                </td>
+
+
+
+
+                      </tr>
+                                          <tr>
+                        <td>3</td>
                         <td style="word-wrap: break-word; white-space: normal;">Islamic Studies/Ethics</td>
                         <td>Dr.Attaullah</td>
                         <td>Mid Term Examination</td>
@@ -544,7 +560,7 @@
 
                       </tr>
                                           <tr>
-                        <td>3</td>
+                        <td>4</td>
                         <td style="word-wrap: break-word; white-space: normal;">Social Sciences</td>
                         <td>Sidra Shahid</td>
                         <td>Mid Term Examination</td>
@@ -560,7 +576,7 @@
 
                       </tr>
                                           <tr>
-                        <td>4</td>
+                        <td>5</td>
                         <td style="word-wrap: break-word; white-space: normal;">Natural Sciences</td>
                         <td>DR.WISAL SHAH</td>
                         <td>Mid Term Examination</td>
@@ -576,7 +592,7 @@
 
                       </tr>
                                           <tr>
-                        <td>5</td>
+                        <td>6</td>
                         <td style="word-wrap: break-word; white-space: normal;">Arts & Humanities</td>
                         <td>DR. KIFAYAT KHAN</td>
                         <td>Mid Term Examination</td>
@@ -592,7 +608,7 @@
 
                       </tr>
                                           <tr>
-                        <td>6</td>
+                        <td>7</td>
                         <td style="word-wrap: break-word; white-space: normal;">Social Sciences</td>
                         <td>Sidra Shahid</td>
                         <td>Quiz</td>
@@ -609,7 +625,7 @@
 
                       </tr>
                                           <tr>
-                        <td>7</td>
+                        <td>8</td>
                         <td style="word-wrap: break-word; white-space: normal;">Arts & Humanities</td>
                         <td>DR. KIFAYAT KHAN</td>
                         <td>Quiz</td>
@@ -626,7 +642,7 @@
 
                       </tr>
                                           <tr>
-                        <td>8</td>
+                        <td>9</td>
                         <td style="word-wrap: break-word; white-space: normal;">Quantitative Reasoning II</td>
                         <td>HAJRA ZEB</td>
                         <td>Quiz</td>
@@ -734,25 +750,23 @@
   }
 </style>
 
+
+<link rel="stylesheet" href="https://studentportal.uoh.edu.pk/resources/assets/quiz_files/css/sweetalert2.min.css">
+<script src="https://studentportal.uoh.edu.pk/resources/assets/quiz_files/js/sweetalert2.js"></script>
+
+
 <script type="text/javascript">
     // JavaScript current time
     var currentdate = new Date(); 
     var jsTime = currentdate.getTime(); // JavaScript time in milliseconds
 
     // PHP current time passed from server as UNIX timestamp
-    var phpTime = 1745519983 * 1000; // Convert to milliseconds
-
-    // Log both times for debugging
-    console.log("JS Time (ms):", jsTime);
-    console.log("PHP Time (ms):", phpTime);
+    var phpTime = 1745787406 * 1000; // Convert to milliseconds
+ 
 
     // Compare times
     var timeDifference = Math.abs(jsTime - phpTime); // Difference in milliseconds
-    var maxAllowedDifference = 5 * 60 * 1000; // 5 minutes in milliseconds
-
-    // Log the difference for debugging
-    console.log("timeDifference (ms):", timeDifference);
-    console.log("maxAllowedDifference (ms):", maxAllowedDifference);
+    var maxAllowedDifference = 5 * 60 * 1000; // 5 minutes in milliseconds 
 
     if (timeDifference > maxAllowedDifference) {
         // Access denied: Disable the button
@@ -766,6 +780,35 @@
     } else {
         // alert("Access granted.");
     }
+
+
+
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    console.log("User Time Zone:", userTimeZone);
+
+    const requiredTimeZone = 'Asia/Karachi';
+
+    if (userTimeZone !== requiredTimeZone) {
+        Swal.fire({
+            title: "Time Zone Mismatch!",
+            text: "Your system time zone is set to " + userTimeZone + 
+                  ". Please set it to Asia/Karachi or Islamabad/Karachi to start the test.",
+            icon: "error",
+            confirmButtonText: "Okay",
+            allowOutsideClick: false,
+            allowEscapeKey: false
+        }).then(() => {
+            // Remove the Start Test button if user tries to proceed anyway
+            const quizStartButton = document.getElementById("quiz_start");
+            if (quizStartButton && quizStartButton.parentNode) {
+                quizStartButton.parentNode.removeChild(quizStartButton);
+            }
+        });
+    }
+
+
+
+
 </script>
 
 
