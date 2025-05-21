@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DFD Level 2 - Food Delivery System</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    margin: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    background: #fff;
+    border: 2px solid #34495e;
+    border-radius: 8px;
+  }
+  .process, .datastore, .external {
+    fill: #3498db;
+    stroke: #2980b9;
+    stroke-width: 2px;
+    rx: 10;
+    ry: 10;
+    cursor: default;
+  }
+  .datastore {
+    fill: #f39c12;
+    stroke: #d35400;
+  }
+  .external {
+    fill: #2ecc71;
+    stroke: #27ae60;
+  }
+  text {
+    font-size: 14px;
+    fill: #fff;
+    pointer-events: none;
+    user-select: none;
+  }
+  .label {
+    fill: #34495e;
+    font-weight: bold;
+    pointer-events: none;
+  }
+  .arrow {
+    fill: none;
+    stroke: #34495e;
+    stroke-width: 2px;
+    marker-end: url(#arrowhead);
+  }
+</style>
+</head>
+<body>
+<h1>Data Flow Diagram Level 2<br/> - Food Delivery System</h1>
+<svg width="900" height="600" role="img" aria-label="DFD Level 2 for Food Delivery System">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+      refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e" />
+    </marker>
+  </defs>
+
+  <!-- External Entities -->
+  <rect x="20" y="50" width="140" height="60" class="external"></rect>
+  <text x="90" y="90" text-anchor="middle">Customer</text>
+
+  <rect x="20" y="450" width="140" height="60" class="external"></rect>
+  <text x="90" y="490" text-anchor="middle">Payment Gateway</text>
+
+  <!-- Processes Level 2 inside a bigger box-->
+  <rect x="200" y="20" width="650" height="520" fill="none" stroke="#7f8c8d" stroke-dasharray="6,4" stroke-width="1"></rect>
+  <text x="205" y="40" class="label" >Food Delivery System Level 2 Details</text>
+
+  <!-- Process 2.1: Order Placement -->
+  <rect x="250" y="80" width="180" height="70" class="process"></rect>
+  <text x="340" y="120" text-anchor="middle">2.1 Order Placement</text>
+
+  <!-- Process 2.2: Order Processing -->
+  <rect x="470" y="80" width="180" height="70" class="process"></rect>
+  <text x="560" y="120" text-anchor="middle">2.2 Order Processing</text>
+
+  <!-- Process 2.3: Payment Processing -->
+  <rect x="250" y="200" width="180" height="70" class="process"></rect>
+  <text x="340" y="240" text-anchor="middle">2.3 Payment Processing</text>
+
+  <!-- Process 2.4: Delivery Handling -->
+  <rect x="470" y="200" width="180" height="70" class="process"></rect>
+  <text x="560" y="240" text-anchor="middle">2.4 Delivery Handling</text>
+
+  <!-- Process 2.5: Order Tracking -->
+  <rect x="350" y="320" width="180" height="70" class="process"></rect>
+  <text x="440" y="360" text-anchor="middle">2.5 Order Tracking</text>
+
+  <!-- Data Store: Menu Data -->
+  <rect x="700" y="80" width="130" height="60" class="datastore"></rect>
+  <text x="765" y="110" text-anchor="middle" fill="#2c3e50">Menu Data</text>
+
+  <!-- Data Store: Order Data -->
+  <rect x="700" y="180" width="130" height="60" class="datastore"></rect>
+  <text x="765" y="210" text-anchor="middle" fill="#2c3e50">Order Data</text>
+
+  <!-- Data Store: Payment Data -->
+  <rect x="700" y="290" width="130" height="60" class="datastore"></rect>
+  <text x="765" y="320" text-anchor="middle" fill="#2c3e50">Payment Data</text>
+
+  <!-- Arrow connections -->
+
+  <!-- Customer -> Order Placement -->
+  <path d="M160 80 L250 110" class="arrow"></path>
+  <text x="200" y="90" fill="#34495e" font-size="12" >Order Details</text>
+
+  <!-- Order Placement -> Menu Data (read) -->
+  <path d="M430 110 L700 110" class="arrow" marker-end="url(#arrowhead)"></path>
+  <text x="565" y="100" fill="#34495e" font-size="12" text-anchor="middle">Menu Request</text>
+  <path d="M700 140 L430 140" class="arrow" marker-end="url(#arrowhead)" style="stroke-dasharray: 5,5;"></path>
+  <text x="565" y="150" fill="#34495e" font-size="12" text-anchor="middle">Menu Data</text>
+
+  <!-- Order Placement -> Order Processing -->
+  <path d="M430 115 L470 115" class="arrow"></path>
+  <text x="450" y="105" fill="#34495e" font-size="12" >Order Info</text>
+
+  <!-- Order Processing -> Order Data -->
+  <path d="M650 210 L700 210" class="arrow"></path>
+  <text x="675" y="200" fill="#34495e" font-size="12" text-anchor="middle">Store Order</text>
+
+  <!-- Order Processing -> Payment Processing -->
+  <path d="M560 150 L340 240" class="arrow"></path>
+  <text x="450" y="200" fill="#34495e" font-size="12" >Payment Request</text>
+
+  <!-- Payment Gateway -> Payment Processing -->
+  <path d="M90 510 L250 240" class="arrow"></path>
+  <text x="170" y="340" fill="#34495e" font-size="12" >Payment Confirmation</text>
+
+  <!-- Payment Processing -> Payment Data -->
+  <path d="M430 260 L700 320" class="arrow"></path>
+  <text x="565" y="290" fill="#34495e" font-size="12" text-anchor="middle">Save Payment</text>
+
+  <!-- Payment Processing -> Order Processing (status) -->
+  <path d="M430 260 L560 150" class="arrow" style="stroke-dasharray: 5,5;"></path>
+  <text x="500" y="210" fill="#34495e" font-size="12" >Payment Status</text>
+
+  <!-- Order Processing -> Delivery Handling -->
+  <path d="M650 240 L650 230" class="arrow"></path>
+  <text x="675" y="230" fill="#34495e" font-size="12" text-anchor="middle">Notify Delivery</text>
+
+  <!-- Delivery Handling -> Order Data -->
+  <path d="M650 240 L700 240" class="arrow"></path>
+  <text x="675" y="260" fill="#34495e" font-size="12" text-anchor="middle">Update Delivery</text>
+
+  <!-- Delivery Handling -> Customer -->
+  <path d="M470 270 L160 475" class="arrow"></path>
+  <text x="250" y="370" fill="#34495e" font-size="12" >Delivery Status</text>
+
+  <!-- Delivery Handling -> Order Tracking -->
+  <path d="M560 270 L440 390" class="arrow"></path>
+  <text x="520" y="320" fill="#34495e" font-size="12" >Update Status</text>
+
+  <!-- Order Tracking -> Customer -->
+  <path d="M440 390 L160 110" class="arrow" marker-end="url(#arrowhead)"></path>
+  <text x="300" y="60" fill="#34495e" font-size="12" >Track Info</text>
+
+</svg>
+</body>
+</html>
+
